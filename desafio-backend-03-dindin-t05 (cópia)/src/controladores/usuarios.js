@@ -88,17 +88,19 @@ const atualizarUsuario = async (req, res) => {
         return res.status(404).json('O campo senha é obrigatório!');
     }
     try {
-        const queryConsultaEmailExistente = 'select * from usuarios where email=$1';
-        const usuarioExistente = await conexao.query(queryConsultaEmailExistente, [email]);
-        if (usuarioExistente.rowCount > 0) {
-            return res.status(400).json('Já existe usuário cadastrado com o e-mail informado.');
-        }
-
         const queryObterUsuario = 'select * from usuarios where id=$1';
-        const { rowCount } = await conexao.query(queryObterUsuario, [id]);
+        const { rowCount, rows } = await conexao.query(queryObterUsuario, [id]);
 
         if (rowCount === 0) {
             return res.status(400).json({ mensagem: 'Usuário não identificado.' });
+        }
+
+        if (rows[0].email !== email) {
+            const queryConsultaEmailExistente = 'select * from usuarios where email=$1';
+            const usuarioExistente = await conexao.query(queryConsultaEmailExistente, [email]);
+            if (usuarioExistente.rowCount > 0) {
+                return res.status(400).json('Já existe usuário cadastrado com o e-mail informado.');
+            }
         }
 
         const senhaCriptografada = await bcrypt.hash(senha, 10);
