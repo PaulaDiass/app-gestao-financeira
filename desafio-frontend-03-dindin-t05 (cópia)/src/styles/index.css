@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+button,
+.btn-sign-up {
+  all: unset;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 0;
+
+  border-radius: 5px;
+  background: #7978d9;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 8px;
+
+  font-size: 16px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+}

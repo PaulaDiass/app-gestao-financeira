@@ -1,0 +1,45 @@
+.container-transaction {
+  height: 69px;
+
+  padding: 20px 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e0e0e0;
+
+  font-size: 14px;
+}
+
+span {
+  text-align: center;
+}
+.data-span {
+  width: 85px;
+}
+
+.day-span {
+  width: 109px;
+}
+
+.description-span {
+  width: 200px;
+}
+
+.category-span {
+  width: 150px;
+}
+
+.value-span {
+  width: 85px;
+}
+
+.transaction-buttons {
+  display: flex;
+  gap: 13px;
+}
+
+.transaction-buttons img:hover {
+  cursor: pointer;
+}

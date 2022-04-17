@@ -1,0 +1,12 @@
+.container-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.container-navbar strong {
+  margin-right: 16px;
+}
+
+.container-navbar img {
+  cursor: pointer;
+}

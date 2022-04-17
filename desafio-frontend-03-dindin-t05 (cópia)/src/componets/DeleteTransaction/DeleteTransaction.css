@@ -1,0 +1,46 @@
+.container-delete {
+  width: 111px;
+  height: 46px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+
+  position: absolute;
+  top: 54px;
+  right: 28px;
+  z-index: 10;
+
+  text-align: center;
+  font-size: 10px;
+
+  background: #e4f2fd;
+  border-radius: 4px;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.container-delete button {
+  border-radius: 4px;
+  padding: 2px 10px;
+}
+
+.btn-yes {
+  background: #3a9ff1;
+}
+
+.btn-no {
+  background: #ff576b;
+}
+
+.arrow {
+  width: 17px;
+  position: absolute;
+  right: 3px;
+  top: -7px;
+}
